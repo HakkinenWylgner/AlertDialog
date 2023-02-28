@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void abrirDialog(View view){
 
+<<<<<<< HEAD
         //Instanciando AlertDialog em dialog, e referenciando o primeiro item com this
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
 
@@ -32,6 +33,18 @@ public class MainActivity extends AppCompatActivity {
             
             /* DialogInterface - Interface que define uma classe do tipo caixa de diálogo que pode ser mostrada,
             descartada ou cancelado e pode ter botões que podem ser clicados.*/
+=======
+        //Instanciar AlertDialog
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+
+        //Configurar Titulo
+        dialog.setTitle("Título da dialog");
+        dialog.setMessage("Mensagem do Dialog");
+
+        //Configurar ações para sim e não
+
+        dialog.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+>>>>>>> 988e2fb (Finalização Dialog)
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
@@ -50,4 +63,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 988e2fb (Finalização Dialog)
