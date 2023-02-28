@@ -18,28 +18,43 @@ public class MainActivity extends AppCompatActivity {
 
     public void abrirDialog(View view){
 
-        //Instanciando AlertDialog em dialog, e referenciando o primeiro item com this
-        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        //Instanciar AlertDialog
+        AlertDialog.Builder dialog = new AlertDialog.Builder( this );
 
-        //Define o Título e a mensagem a ser reproduzida.
+        //Configurar titulo e mensagem
         dialog.setTitle("Título da dialog");
-        dialog.setMessage("Mensagem do Dialog");
+        dialog.setMessage("Mensagem da Dialog");
 
-        //Configurando sim para alertdialog que é uma caixa com opção que poderia ser até um ok!
-        //Defina um ouvinte a ser invocado quando o botão positivo da caixa de diálogo for pressionado.
+        //Configurar cancelamento
+        dialog.setCancelable(false);
 
+        //Configurar icone
+        dialog.setIcon( android.R.drawable.ic_btn_speak_now );
+
+        //Configura acoes para sim e nao
         dialog.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
-            
-            /* DialogInterface - Interface que define uma classe do tipo caixa de diálogo que pode ser mostrada,
-            descartada ou cancelado e pode ter botões que podem ser clicados.*/
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
                 Toast.makeText(
                         getApplicationContext(),
-                        "Executar ação ao clicarr no botão sim",
+                        "Executar ação ao clicar no botão Sim",
                         Toast.LENGTH_SHORT
                 ).show();
+
+            }
+        });
+
+        dialog.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                Toast.makeText(
+                        getApplicationContext(),
+                        "Executar ação ao clicar no botão não",
+                        Toast.LENGTH_SHORT
+                ).show();
+
             }
         });
 
@@ -48,6 +63,5 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
 
     }
-
 
 }
