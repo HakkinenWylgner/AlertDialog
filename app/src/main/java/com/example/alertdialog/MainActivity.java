@@ -21,13 +21,17 @@ public class MainActivity extends AppCompatActivity {
         //Instanciando AlertDialog em dialog, e referenciando o primeiro item com this
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
 
-        //Configurar Titulo
+        //Define o Título e a mensagem a ser reproduzida.
         dialog.setTitle("Título da dialog");
         dialog.setMessage("Mensagem do Dialog");
 
         //Configurando sim para alertdialog que é uma caixa com opção que poderia ser até um ok!
+        //Defina um ouvinte a ser invocado quando o botão positivo da caixa de diálogo for pressionado. DialogInterface
 
         dialog.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+            
+            /* DialogInterface - Interface que define uma classe do tipo caixa de diálogo que pode ser mostrada,
+            descartada ou cancelado e pode ter botões que podem ser clicados.*/
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
