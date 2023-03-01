@@ -18,14 +18,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void abrirDialog(View view){
 
-        //Instanciar AlertDialog
+        //Instanciando AlertDialog em dialog, e referenciando o primeiro item com this
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
 
         //Configurar Titulo
         dialog.setTitle("Título da dialog");
         dialog.setMessage("Mensagem do Dialog");
 
-        //Configurar ações para sim e não
+        //Configurando sim para alertdialog que é uma caixa com opção que poderia ser até um ok!
 
         dialog.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             @Override
