@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.setMessage("Mensagem do Dialog");
 
         //Configurando sim para alertdialog que é uma caixa com opção que poderia ser até um ok!
-        //Defina um ouvinte a ser invocado quando o botão positivo da caixa de diálogo for pressionado. DialogInterface
+        //Defina um ouvinte a ser invocado quando o botão positivo da caixa de diálogo for pressionado.
 
         dialog.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             
