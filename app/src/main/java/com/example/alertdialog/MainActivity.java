@@ -18,43 +18,41 @@ public class MainActivity extends AppCompatActivity {
 
     public void abrirDialog(View view){
 
-        //Instanciar AlertDialog
-        AlertDialog.Builder dialog = new AlertDialog.Builder( this );
+<<<<<<< HEAD
+        //Instanciando AlertDialog em dialog, e referenciando o primeiro item com this
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
 
-        //Configurar titulo e mensagem
+        //Define o Título e a mensagem a ser reproduzida.
         dialog.setTitle("Título da dialog");
-        dialog.setMessage("Mensagem da Dialog");
+        dialog.setMessage("Mensagem do Dialog");
 
-        //Configurar cancelamento
-        dialog.setCancelable(false);
+        //Configurando sim para alertdialog que é uma caixa com opção que poderia ser até um ok!
+        //Defina um ouvinte a ser invocado quando o botão positivo da caixa de diálogo for pressionado.
 
-        //Configurar icone
-        dialog.setIcon( android.R.drawable.ic_btn_speak_now );
-
-        //Configura acoes para sim e nao
         dialog.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+            
+            /* DialogInterface - Interface que define uma classe do tipo caixa de diálogo que pode ser mostrada,
+            descartada ou cancelado e pode ter botões que podem ser clicados.*/
+=======
+        //Instanciar AlertDialog
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+
+        //Configurar Titulo
+        dialog.setTitle("Título da dialog");
+        dialog.setMessage("Mensagem do Dialog");
+
+        //Configurar ações para sim e não
+
+        dialog.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+>>>>>>> 988e2fb (Finalização Dialog)
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
                 Toast.makeText(
                         getApplicationContext(),
-                        "Executar ação ao clicar no botão Sim",
+                        "Executar ação ao clicarr no botão sim",
                         Toast.LENGTH_SHORT
                 ).show();
-
-            }
-        });
-
-        dialog.setNegativeButton("Não", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-                Toast.makeText(
-                        getApplicationContext(),
-                        "Executar ação ao clicar no botão não",
-                        Toast.LENGTH_SHORT
-                ).show();
-
             }
         });
 
@@ -64,4 +62,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 988e2fb (Finalização Dialog)
